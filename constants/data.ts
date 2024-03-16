@@ -119,16 +119,16 @@ export const navItems: NavItem[] = [
     label: "Dashboard",
   },
   {
-    title: "User",
+    title: "Inventory",
     href: "/dashboard/user",
-    icon: "user",
-    label: "user",
+    icon: "inventory",
+    label: "inventory",
   },
   {
-    title: "Employee",
+    title: "Customers",
     href: "/dashboard/employee",
-    icon: "employee",
-    label: "employee",
+    icon: "customers",
+    label: "customers",
   },
   {
     title: "Profile",
@@ -136,16 +136,16 @@ export const navItems: NavItem[] = [
     icon: "profile",
     label: "profile",
   },
+//  {
+//    title: "Kanban",
+//    href: "/dashboard/kanban",
+//    icon: "kanban",
+//    label: "kanban",
+//  },
   {
-    title: "Kanban",
-    href: "/dashboard/kanban",
-    icon: "kanban",
-    label: "kanban",
-  },
-  {
-    title: "Login",
+    title: "Logout",
     href: "/",
-    icon: "login",
-    label: "login",
+    icon: "logout",
+    label: "logout",
   },
 ];

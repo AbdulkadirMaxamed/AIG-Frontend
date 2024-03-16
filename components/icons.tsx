@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  Car,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -15,6 +16,7 @@ import {
   LayoutDashboardIcon,
   Loader2,
   LogIn,
+  LogOut,
   LucideIcon,
   LucideProps,
   Moon,
@@ -27,7 +29,7 @@ import {
   Twitter,
   User,
   User2Icon,
-  UserX2Icon,
+  Users,
   X,
 } from "lucide-react";
 
@@ -37,6 +39,8 @@ export const Icons = {
   dashboard: LayoutDashboardIcon,
   logo: Command,
   login: LogIn,
+  logout: LogOut,
+  inventory: Car,
   close: X,
   profile: User2Icon,
   spinner: Loader2,
@@ -44,7 +48,7 @@ export const Icons = {
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   trash: Trash,
-  employee: UserX2Icon,
+  customers: Users,
   post: FileText,
   page: File,
   media: Image,

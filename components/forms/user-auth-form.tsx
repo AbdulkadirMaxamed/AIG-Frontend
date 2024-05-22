@@ -19,6 +19,7 @@ import GoogleSignInButton from "../github-auth-button";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Enter a valid email address" }),
+  password: z.string()
 });
 
 type UserFormValue = z.infer<typeof formSchema>;
@@ -29,6 +30,7 @@ export default function UserAuthForm() {
   const [loading, setLoading] = useState(false);
   const defaultValues = {
     email: "demo@gmail.com",
+    password: undefined
   };
   const form = useForm<UserFormValue>({
     resolver: zodResolver(formSchema),
@@ -38,6 +40,7 @@ export default function UserAuthForm() {
   const onSubmit = async (data: UserFormValue) => {
     signIn("credentials", {
       email: data.email,
+      password: data.password,
       callbackUrl: callbackUrl ?? "/dashboard",
     });
   };
@@ -67,9 +70,26 @@ export default function UserAuthForm() {
               </FormItem>
             )}
           />
-
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input
+                    type="password"
+                    placeholder=""
+                    disabled={loading}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <Button disabled={loading} className="ml-auto w-full" type="submit">
-            Continue With Email
+            Login
           </Button>
         </form>
       </Form>
